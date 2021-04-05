@@ -1,0 +1,22 @@
+.app-nav a:not(.active-link) {
+  color: #64748b;
+}
+
+.app-nav a {
+  font-size: 14px;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+.active-link {
+  color: #1a202e;
+  border-bottom: solid 2px #1a202e;
+  /* font-weight: 700; */
+}
+
+.app-nav {
+  min-width: 34%;
+  padding: 1rem 0 4rem;
+  display: flex;
+  justify-content: flex-start;
+}

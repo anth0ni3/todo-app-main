@@ -1,0 +1,25 @@
+.relative {
+  position: relative;
+}
+
+.relative .svg {
+  opacity: 1;
+  cursor: pointer;
+  position: absolute;
+  right: 0.7rem;
+}
+
+.relative .svg:hover {
+  opacity: 0.5;
+}
+
+.relative .fullinput {
+  font-size: 16px;
+  width: 100%;
+  padding: 0.7rem 0.4rem;
+  border: none;
+}
+
+.fullinput::placeholder {
+  font-size: 16px;
+}
