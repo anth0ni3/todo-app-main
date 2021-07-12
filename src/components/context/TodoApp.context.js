@@ -23,7 +23,15 @@ const TodoAppContextProvider = (props) => {
         setTodos(newTodos);
     };
 
-    return <TodoAppContext.Provider value={{todos,addTodo,deleteTodo}}>{props.children}</TodoAppContext.Provider>
+    //
+
+    const [showAdd, setShowAdd] = useState(false);
+
+    const toggleAdd = () => {
+        setShowAdd(!showAdd);
+    };
+
+    return <TodoAppContext.Provider value={{todos,addTodo,deleteTodo, setShowAdd, showAdd, toggleAdd}}>{props.children}</TodoAppContext.Provider>
 }
 
 export default TodoAppContextProvider;

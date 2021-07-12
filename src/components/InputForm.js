@@ -3,8 +3,8 @@ import "./assets/css/InputForm.css";
 import useInputState from "./hooks/useInputState";
 import {TodoAppContext} from "./context/TodoApp.context";
 
-const InputForm = ({setShowAdd }) => {
-    const {addTodo} = useContext(TodoAppContext);
+const InputForm = () => {
+    const {addTodo, setShowAdd} = useContext(TodoAppContext);
   const [value, handleChange, reset] = useInputState("");
   return (
     <div className="flexy relative">

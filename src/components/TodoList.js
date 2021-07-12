@@ -1,16 +1,12 @@
-import React, {useContext, useState} from "react";
+import React, {useContext} from "react";
 import TodoItem from "./TodoItem";
 import InputForm from "./InputForm";
 import {TodoAppContext} from "./context/TodoApp.context";
 import "./assets/css/TodoList.css";
 
 const TodoList = () => {
-  const {todos} = useContext(TodoAppContext);
-  const [showAdd, setShowAdd] = useState(false);
+  const {todos, showAdd} = useContext(TodoAppContext);
 
-  const toggleAdd = () => {
-    setShowAdd(!showAdd);
-  };
 
   return (
     <div>
@@ -42,7 +38,7 @@ const TodoList = () => {
         ) : (
           <p className="flexy item">Add new todo</p>
         )}
-        {showAdd ? <InputForm setShowAdd={setShowAdd} /> : ""}
+        {showAdd ? <InputForm /> : ""}
       </div>
     </div>
   );
