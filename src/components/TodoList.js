@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, {useContext, useState} from "react";
 import TodoItem from "./TodoItem";
 import InputForm from "./InputForm";
+import {TodoAppContext} from "./context/TodoApp.context";
 import "./assets/css/TodoList.css";
 
-const TodoList = ({ todos, addTodo, deleteTodo }) => {
+const TodoList = () => {
+  const {todos} = useContext(TodoAppContext);
   const [showAdd, setShowAdd] = useState(false);
 
   const toggleAdd = () => {
@@ -23,7 +25,7 @@ const TodoList = ({ todos, addTodo, deleteTodo }) => {
           >
             <title>Add new todo</title>
             <g fill="#111111">
-              <path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path>
+              <path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"/>
             </g>
           </svg>
         </div>
@@ -35,13 +37,12 @@ const TodoList = ({ todos, addTodo, deleteTodo }) => {
               id={todo.id}
               key={todo.id}
               task={todo.task}
-              deleteTodo={deleteTodo}
             />
           ))
         ) : (
           <p className="flexy item">Add new todo</p>
         )}
-        {showAdd ? <InputForm addTodo={addTodo} setShowAdd={setShowAdd} /> : ""}
+        {showAdd ? <InputForm setShowAdd={setShowAdd} /> : ""}
       </div>
     </div>
   );
