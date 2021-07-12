@@ -4,7 +4,10 @@ import {v4 as uuidv4} from "uuid";
 export const TodoAppContext = createContext()
 
 const TodoAppContextProvider = (props) => {
-    const initialTodos = JSON.parse(localStorage.getItem("todos")) | [{task: "dddd", id: 1}];
+
+    const ini = JSON.parse(localStorage.getItem("todos"));
+
+    const initialTodos = ini ? ini : [];
 
     const [todos, setTodos] = useState(initialTodos)
 
