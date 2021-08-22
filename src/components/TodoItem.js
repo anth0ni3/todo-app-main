@@ -1,7 +1,9 @@
-import React from "react";
+import React, {useContext} from "react";
 import "./assets/css/TodoItem.css";
+import {TodoAppContext} from "./context/TodoApp.context";
 
-const TodoItem = ({ task, deleteTodo, id }) => {
+const TodoItem = ({ task, id }) => {
+    const { deleteTodo} = useContext(TodoAppContext);
   return (
     <div className="flexy item">
       <p>{task}</p>
@@ -16,9 +18,9 @@ const TodoItem = ({ task, deleteTodo, id }) => {
           <title>Delete Todo</title>
           <g fill="none">
             <path
-              d="M15.59 7L12 10.59 8.41 7 7 8.41 10.59 12 7 15.59 8.41 17 12 13.41 15.59 17 17 15.59 13.41 12 17 8.41 15.59 7z"
-              fill="#111111"
-            ></path>
+    d="M15.59 7L12 10.59 8.41 7 7 8.41 10.59 12 7 15.59 8.41 17 12 13.41 15.59 17 17 15.59 13.41 12 17 8.41 15.59 7z"
+    fill="#111111"
+    />
           </g>
         </svg>
       </div>

@@ -1,8 +1,10 @@
-import React from "react";
+import React, {useContext} from "react";
 import "./assets/css/InputForm.css";
 import useInputState from "./hooks/useInputState";
+import {TodoAppContext} from "./context/TodoApp.context";
 
-const InputForm = ({ addTodo, setShowAdd }) => {
+const InputForm = () => {
+    const {addTodo, setShowAdd} = useContext(TodoAppContext);
   const [value, handleChange, reset] = useInputState("");
   return (
     <div className="flexy relative">
@@ -30,7 +32,7 @@ const InputForm = ({ addTodo, setShowAdd }) => {
         >
           <title>Save Reminder</title>
           <g fill="#111111">
-            <path d="M10 15.586l-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path>
+            <path d="M10 15.586l-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"/>
           </g>
         </svg>
       </div>
