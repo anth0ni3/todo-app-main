@@ -24,7 +24,7 @@ const TodoList = () => {
           </svg>
         </div>
       </div>
-      <div>
+      <div className="todo-scroll">
         {todos.length > 0
           ? todos.map(todo => (
               <TodoItem id={todo.id} key={todo.id} task={todo.task} />
