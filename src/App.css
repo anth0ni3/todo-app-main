@@ -8,3 +8,9 @@
   overflow: hidden;
   background-color: #e2e8f0;
 }
+
+@media screen and (min-width: 320px) {
+  .App {
+    padding-top: 7em;
+  }
+}

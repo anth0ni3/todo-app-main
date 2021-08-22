@@ -10,7 +10,7 @@ const TodoList = () => {
   return (
     <div>
       <div className="flexy sb">
-        <h1 className="title">Reminders</h1>
+        <h2 className="title">Reminders</h2>
         <div className="svg add" onClick={toggleAdd}>
           <svg
             xmlns="http://www.w3.org/2000/svg"

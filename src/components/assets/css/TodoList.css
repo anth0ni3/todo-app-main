@@ -2,6 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1em;
+}
+
+.title {
+  font-size: 1.9em;
 }
 
 .sb {
