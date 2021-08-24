@@ -17,8 +17,8 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .todo-app {
-    width: calc(100% - 40vw);
+    width: calc(100% - 50vw);
   }
 }
